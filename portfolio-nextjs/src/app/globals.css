@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fbfbfb;
+  color: #1a1a1a;
+}
+
+/* Selection style supaya konsisten dengan palet Dark Charcoal / Off-White */
+::selection {
+  background-color: #1a1a1a;
+  color: #fbfbfb;
+}
+
+/* Garis bawah animasi halus untuk link (Contact section & link eksternal Hero) */
+@layer components {
+  .link-underline {
+    position: relative;
+    display: inline-block;
+  }
+
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 1px;
+    width: 100%;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.45s var(--ease-soft, cubic-bezier(0.16, 1, 0.3, 1));
+  }
+
+  .link-underline:hover::after,
+  .link-underline:focus-visible::after {
+    transform: scaleX(1);
+  }
+}
+
+/* Sembunyikan scrollbar horizontal track GSAP (opsional, murni kosmetik) */
+.horizontal-track {
+  will-change: transform;
+}
+
+/* Gradient masking for profile image fade-out at the bottom */
+.image-fade-bottom {
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+}
+
