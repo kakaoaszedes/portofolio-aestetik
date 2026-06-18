@@ -44,7 +44,7 @@ export default function Hero() {
         {/* KOLOM TENGAH: FOTO BESAR */}
         <div className="w-full md:w-[50%] flex justify-center items-start relative h-full z-0">
           {/* Gunakan ukuran w-[450px] sampai w-[500px] agar foto tetap besar seperti di Figma */}
-          <div className="relative w-[320px] md:w-[450px] aspect-[797/842] mx-auto image-fade-bottom transition-transform duration-500 hover:scale-[1.01] md:-translate-y-10 [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1)_85%,rgba(0,0,0,0)_100%)]">
+          <div className="relative w-[320px] md:w-[450px] aspect-[797/842] mx-auto image-fade-bottom transition-transform duration-500 hover:scale-[1.01] md:-translate-y-24 [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1)_85%,rgba(0,0,0,0)_100%)]">
             <Image
               src={profile.heroImage}
               alt={`Potret ${profile.name} mengenakan jas hitam`}
@@ -57,7 +57,7 @@ export default function Hero() {
         </div>
 
         {/* KOLOM KANAN: TEKS DESKRIPSI (KECIL & MENTOK KANAN) */}
-        <div className="w-full md:w-[35%] flex flex-col justify-start items-end text-right md:pl-8 z-10 relative md:pt-20">
+        <div className="w-full md:w-[35%] flex flex-col justify-start items-end text-right md:pl-8 z-10 relative md:pt-32">
           <div className="w-full max-w-[320px] text-left"> {/* Tetap text-left untuk teksnya, tapi kontainernya didorong ke kanan */}
             <p className="text-charcoal/50 text-xs tracking-widest uppercase mb-4">
               {profile.location}
